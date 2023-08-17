@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="teleoperation" pkg="pry_ram" type="teleop.py" output="screen" />
+    <node name="keyboard_publisher" pkg="pry_ram" type="key_publisher.py" output="screen" />
+</launch>

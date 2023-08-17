@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find pry_ram)/launch/Sensors/rplidar_scanlidar.launch"/>
+    <include file="$(find pry_ram)/launch/Sensors/realsense.launch"/>  
+
+    <node name="depthimage_to_laserscan" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan"> 
+        <remap from="image" to="/camera/depth/image_raw"/>
+    </node>
+</launch>

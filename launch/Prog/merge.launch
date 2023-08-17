@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="ira_laser_tools" name="scan_merge" type="laserscan_multi_merger" output="screen">
+	<param name="destination_frame" value="laser"/>
+	<param name="cloud_destination_topic" value="/merged_cloud"/>
+	<param name="scan_destination_topic" value="/scan"/>
+	<param name="laserscan_topics" value ="/scan_lidar /scan_realsense" /> <!-- LIST OF THE LASER SCAN TOPICS TO SUBSCRIBE -->
+	<param name="angle_min" value="-2.0"/>
+	<param name="angle_max" value="2.0"/>
+	<param name="angle_increment" value="0.0058"/>
+	<param name="scan_time" value="0.0333333"/>
+	<param name="range_min" value="0.10"/>
+	<param name="range_max" value="50.0"/>
+	</node>
+</launch>

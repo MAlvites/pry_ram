@@ -1,0 +1,27 @@
+footprint: [[-0.115, -0.278], [-0.278, -0.115], [-0.278, 0.115],[-0.115, 0.278],[0.115, 0.278],[0.278, 0.115],[0.278, -0.115],[0.115, -0.278]]
+footprint_padding: 0.01
+
+#robot_base_frame: base_link No esta
+#update_frequency: 10.0 No esta
+#publish_frequency: 9.0 No esta
+transform_tolerance: 1
+#resolution: 0.1
+
+obstacle_range: 5.5
+raytrace_range: 6.0
+#obstacle_range: 3.0
+#raytrace_range: 3.5
+
+#layer definitions
+#subscribe_to_updates: true
+
+static:
+    map_topic: /map
+
+obstacles_laser:
+    observation_sources: laser
+    laser: {sensor_frame: rplidar_frame, data_type: LaserScan, clearing: true, marking: true, topic: scan, inf_is_valid: false}
+
+inflation:
+    inflation_radius: 0.5
+    cost_scaling_factor: 1.0

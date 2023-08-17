@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<robot name="RobotAF_MEN">
+
+  <material name="orange">
+    <color rgba="1 0.65 0.1 1"/>
+  </material>
+
+  <material name="gray">
+    <color rgba="0.75 0.75 0.75 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  
+  <link name="base_link"/>
+  <link name="base_footprint"/>
+
+  <link name="baseO_1">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.023"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <link name="baseO_4">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.023"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <link name="baseO_2">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.023"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <link name="baseO_3">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.023"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <link name="baseO_5">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.02"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+  <link name="baseO_6">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.02"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+  <link name="baseO_7">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.02"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+  <link name="baseO_8">
+    <visual>
+      <geometry>
+        <box size="0.192 0.463 0.02"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+
+  <joint name="BL_baseO_1" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_1"/>
+    <origin xyz="0 0 -0.0115" rpy="0 0 0"/>
+  </joint>
+  <joint name="BL_baseO_2" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_2"/>
+    <origin xyz="0 0 -0.0115" rpy="0 0 0.7854"/>
+  </joint>
+  <joint name="BL_baseO_3" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_3"/>
+    <origin xyz="0 0 -0.0115" rpy="0 0 1.5708"/>
+  </joint>
+  <joint name="BL_baseO_4" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_4"/>
+    <origin xyz="0 0 -0.0115" rpy="0 0 2.3562"/>
+  </joint>
+  <joint name="BL_baseO_5" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_5"/>
+    <origin xyz="0 0 -0.213" rpy="0 0 0"/>
+  </joint>
+  <joint name="BL_baseO_6" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_6"/>
+    <origin xyz="0 0 -0.213" rpy="0 0 0.7854"/>
+  </joint>
+  <joint name="BL_baseO_7" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_7"/>
+    <origin xyz="0 0 -0.213" rpy="0 0 1.5708"/>
+  </joint>
+  <joint name="BL_baseO_8" type="fixed">
+    <parent link="base_link"/>
+    <child link="baseO_8"/>
+    <origin xyz="0 0 -0.213" rpy="0 0 2.3562"/>
+  </joint>
+
+  <joint name="BL_BFP" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 -0.290" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base"/>
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base"/>
+    <origin xyz="0 0 -0.223" rpy="0 0 0"/>
+  </joint>
+
+  <link name="s1">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+  
+    <link name="s2">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+  <link name="s3">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+  <link name="s4">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+  <link name="s5">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+  <link name="s6">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+  <link name="s7">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+  <link name="s8">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.180"/>
+      </geometry>
+      <material name="gray"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+ 
+
+  <joint name="BL_s1" type="fixed">
+    <parent link="base_link"/>
+    <child link="s1"/>
+    <origin xyz="0.2218 0 -0.113" rpy="0 0 0" />
+  </joint>
+  <joint name="BL_s2" type="fixed">
+    <parent link="base_link"/>
+    <child link="s2"/>
+    <origin xyz="0.1568 0.1568 -0.113"  rpy="0 0 0.785"  />
+  </joint>
+  <joint name="BL_s3" type="fixed">
+    <parent link="base_link"/>
+    <child link="s3"/>
+    <origin xyz="0 0.2218 -0.113" rpy="0 0 0" />
+  </joint>
+  <joint name="BL_s4" type="fixed">
+    <parent link="base_link"/>
+    <child link="s4"/>
+    <origin xyz="-0.1568 0.1568 -0.113" rpy="0 0 2.356" />
+  </joint>
+  <joint name="BL_s5" type="fixed">
+    <parent link="base_link"/>
+    <child link="s5"/>
+    <origin xyz="-0.2218 0 -0.113" rpy="0 0 1.571" />
+  </joint>
+  <joint name="BL_s8" type="fixed">
+    <parent link="base_link"/>
+    <child link="s8"/>
+    <origin xyz="0.1568 -0.1568 -0.113" rpy="0 0 -0.785" />
+  </joint>
+  <joint name="BL_s7" type="fixed">
+    <parent link="base_link"/>
+    <child link="s7"/>
+    <origin xyz="0 -0.2218 -0.113" rpy="0 0 -0.785" />
+  </joint>
+  <joint name="BL_s6" type="fixed">
+    <parent link="base_link"/>
+    <child link="s6"/>
+    <origin xyz="-0.1568 -0.1568 -0.113" rpy="0 0 -2.356" />
+  </joint>
+
+  <link name="right_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.033" radius="0.1016"/>
+      </geometry>
+      <material name="gray"/>
+    <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+         <cylinder length="0.033" radius="0.1016"/>
+      </geometry> 
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+    </inertial>
+  </link>
+    <link name="left_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.033" radius="0.1016"/>
+      </geometry>
+      <material name="gray"/>
+    <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+         <cylinder length="0.033" radius="0.1016"/>
+      </geometry> 
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+    </inertial>
+  </link>
+
+  <joint name="right_wheel_joint" type="fixed">
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <parent link="base_footprint"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.1475 0.1016"/>
+  </joint>
+  <joint name="left_wheel_joint" type="fixed">
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <parent link="base_footprint"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.1475 0.1016"/>
+  </joint>
+
+
+  <link name="soporte1">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <material name="white"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+         <sphere radius="0.025"/>
+      </geometry> 
+    </collision>
+    <inertial>
+      <mass value="0.5e-2"/>
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+    </inertial>
+  </link>
+  <joint name="soporte1_joint" type="fixed">
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <parent link="base_footprint"/>
+    <child link="soporte1"/>
+    <origin rpy="0 0 0" xyz="0.1568 0.1568 0.025"/>
+  </joint>
+  <link name="soporte2">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <material name="white"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+         <sphere radius="0.025"/>
+      </geometry> 
+    </collision>
+    <inertial>
+      <mass value="0.5e-2"/>
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+    </inertial>
+  </link>
+  <joint name="soporte2_joint" type="fixed">
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <parent link="base_footprint"/>
+    <child link="soporte2"/>
+    <origin rpy="0 0 0" xyz="-0.1568 0.1568 0.025"/>
+  </joint>
+
+  <link name="soporte3">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <material name="white"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+         <sphere radius="0.025"/>
+      </geometry> 
+    </collision>
+    <inertial>
+      <mass value="0.5e-2"/>
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+    </inertial>
+  </link>
+  <joint name="soporte3_joint" type="fixed">
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <parent link="base_footprint"/>
+    <child link="soporte3"/>
+    <origin rpy="0 0 0" xyz="-0.1568 -0.1568 0.025"/>
+  </joint>
+  
+  <link name="soporte4">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <material name="white"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+         <sphere radius="0.025"/>
+      </geometry> 
+    </collision>
+    <inertial>
+      <mass value="0.5e-2"/>
+      <inertia ixx="1.1175580e-05" ixy="-4.2369783e-11" ixz="-5.9381719e-09"
+               iyy="1.1192413e-05" iyz="-1.4400107e-11"
+               izz="2.0712558e-05" />
+    </inertial>
+  </link>
+  <joint name="soporte4_joint" type="fixed">
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <parent link="base_footprint"/>
+    <child link="soporte4"/>
+    <origin rpy="0 0 0" xyz="0.1568 -0.1568 0.025"/>
+  </joint>
+
+
+  <link name="laser"/>
+
+  <joint name="scan_merge" type="fixed">
+    <parent link="base"/>
+    <child link="laser"/>
+    <origin rpy="0 0 0" xyz="0.13 0 0.036"/>
+  </joint>
+
+  <link name="s_lidar">
+    <visual>
+      <geometry>
+        <cylinder length="0.041" radius="0.038"/>
+      </geometry>
+      <material name="black"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="BL_s_lidar" type="fixed">
+    <parent link="base_link"/>
+    <child link="s_lidar"/>
+    <origin xyz="0.0656 0 0.0205"/>
+  </joint>
+</robot>

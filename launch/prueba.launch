@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <!--SENSORES-->
+    <include file="$(find pry_ram)/launch/Sensors/all_sensors.launch">
+    </include>
+    <!--VISUALIZACION Y TFS-->
+    <include file="$(find pry_ram)/launch/Display/display.launch"/>
+    <!--PROG-->
+    <include file="$(find pry_ram)/launch/Prog/depth.launch"/>
+    <include file="$(find pry_ram)/launch/Prog/merge.launch"/>
+</launch>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <!--DESCRIPCION DE MODELO DE ROBOT-->
+  <arg name="model" default="$(find pry_ram)/urdf/robot_ram.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+  <!--PAQUETE  DE TRANSFORMACIONES FIJAS-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <!--VIUALIZADOR RVIZ-->
+  <arg name="rvizconfig" default="$(find pry_ram)/rviz/simulador.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  <!--PUBLICADOR DE TRANSFORMACION-->
+  <node name="tf_brodcaster" pkg="pry_ram" type="tf_publisher.py"/>
+</launch>

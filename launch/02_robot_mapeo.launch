@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <!--Actuadores-->
+    <include file="$(find pry_ram)/launch/Actuators/all_actuators.launch"/>
+    <!--Sensores-->
+    <include file="$(find pry_ram)/launch/Sensors/all_sensors.launch"/>
+    <!--Transformaciones y Visualizacion-->
+    <include file="$(find pry_ram)/launch/Display/display.launch"/>
+    <!--Teleoperacion-->
+    <include file="$(find pry_ram)/launch/Prog/teleoperation.launch"/>
+    <!--Navegacion-->
+    <include file="$(find pry_ram)/launch/Prog/slam_gmapping.launch"/>
+    
+</launch>

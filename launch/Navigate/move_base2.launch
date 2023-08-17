@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="no_static_map" default="false"/>
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
+  <arg name="odom_topic" default="odom" />
+  <arg name="move_forward_only" default="false"/>
+
+  <arg name="base_global_planner" default="navfn/NavfnROS"/>
+  <arg name="base_local_planner" default="dwa_local_planner/DWAPlannerROS"/> <!--LISTO-->
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen"> <!--LISTO-->
+
+    <param name="base_global_planner" value="$(arg base_global_planner)"/>
+    <param name="base_local_planner" value="$(arg base_local_planner)"/>  
+
+    <!-- observation sources located in costmap_common.yaml -->
+    <rosparam file="$(find pry_ram)/config/costmap_common.yaml" command="load" ns="global_costmap" /> <!--LISTO-->
+    <rosparam file="$(find pry_ram)/config/costmap_common.yaml" command="load" ns="local_costmap" /><!--LISTO-->
+
+    <rosparam file="$(find pry_ram)/config/turtle/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find pry_ram)/config/turtle/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find pry_ram)/config/turtle/move_base_params.yaml" command="load" />
+    
+    <rosparam file="$(find pry_ram)/config/turtle/dwa_local_planner_params.yaml" command="load" />
+    <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
+    <remap from="odom" to="$(arg odom_topic)"/>
+    <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)" />
+
+  </node>
+
+</launch>

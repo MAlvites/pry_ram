@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="convert_depth_to_scan" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan">
+        <remap from="scan" to="scan_realsense"/>
+	<remap from="image" to="/camera/depth/image_rect_raw"/>
+	<param name="output_frame_id" type="str"    value="realsense_frame"/>
+    </node>
+</launch>

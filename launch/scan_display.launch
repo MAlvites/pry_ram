@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find pry_ram)/launch/Sensors/rp.launch"/>
+    <include file="$(find pry_ram)/launch/Display/display.launch"/>
+    <include file="$(find pry_ram)/launch/prog/merge.launch"/>
+    <include file="$(find pry_ram)/launch/prog/convertdepth.launch"/>
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+    <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch"/>
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch"/>
+    <node name="robot_pose_web" pkg="pose_publisher" type="pose_publisher"/>
+</launch>
