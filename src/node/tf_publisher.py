@@ -18,7 +18,8 @@ if __name__ == '__main__':
 
     camera_blink.sendTransform((0.1, 0.00, 0.336),
         tf.transformations.quaternion_from_euler(0, 0, 0),
-        rospy.Time.now(),"realsense_frame","base_link")
+        #rospy.Time.now(),"realsense_frame","base_link")
+        rospy.Time.now(),"camera_depth_frame","base_link")
 
     rplidar_blink.sendTransform((0.0656, 0.00, 0.031),
         tf.transformations.quaternion_from_euler(0, 0, 0),
